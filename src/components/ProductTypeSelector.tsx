@@ -1,6 +1,6 @@
 import React from 'react';
 import type { ProductCategory } from '../types';
-import { Smartphone, Laptop, Tablet, Watch, Headphones, Package } from 'lucide-react';
+import { Smartphone, Laptop, } from 'lucide-react';
 
 interface ProductTypeSelectorProps {
   selectedCategory: ProductCategory;
@@ -26,8 +26,8 @@ export const ProductTypeSelector: React.FC<ProductTypeSelectorProps> = ({
             type="button"
             onClick={() => onSelectCategory(cat.id)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${isSelected
-                ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-900/30 ring-1 ring-emerald-400/40'
-                : 'bg-slate-900/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800'
+              ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-900/30 ring-1 ring-emerald-400/40'
+              : 'bg-slate-900/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800'
               }`}
           >
             <span className={isSelected ? 'text-slate-950' : 'text-emerald-400'}>{cat.icon}</span>

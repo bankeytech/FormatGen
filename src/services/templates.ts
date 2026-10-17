@@ -11,7 +11,7 @@ export const DEFAULT_STYLE_PREFERENCES: ResellerStylePreferences = {
   cta: 'DM to order 📲',
 };
 
-export const STYLE_STORAGE_KEY = 'formatgen_reseller_style_v1';
+export const STYLE_STORAGE_KEY = 'Bankeys4mat_reseller_style_v1';
 
 export function getStoredStylePreferences(): ResellerStylePreferences {
   try {

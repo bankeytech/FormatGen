@@ -103,7 +103,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
         {/* Content */}
         <form onSubmit={handleSave} className="p-5 space-y-4">
           <p className="text-xs text-slate-300 leading-relaxed">
-            FormatGen works completely offline with a smart regex parser. To unlock deep AI reasoning for complex Nigerian marketplace terms (BH, tokunbo variants, messy abbreviations), you can use an <strong>OpenRouter</strong> or <strong>Google Gemini</strong> key.
+            Bankeys4mat works completely offline with a smart regex parser. To unlock deep AI reasoning for complex Nigerian marketplace terms (BH, tokunbo variants, messy abbreviations), you can use an <strong>OpenRouter</strong> or <strong>Google Gemini</strong> key.
           </p>
 
           {/* Provider Selection Tabs */}
@@ -115,33 +115,30 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
               <button
                 type="button"
                 onClick={() => setProvider('auto')}
-                className={`py-1.5 px-2 rounded-lg font-medium transition-all text-center cursor-pointer ${
-                  provider === 'auto'
-                    ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
-                    : 'text-slate-400 hover:text-white'
-                }`}
+                className={`py-1.5 px-2 rounded-lg font-medium transition-all text-center cursor-pointer ${provider === 'auto'
+                  ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
+                  : 'text-slate-400 hover:text-white'
+                  }`}
               >
                 Auto Detect
               </button>
               <button
                 type="button"
                 onClick={() => setProvider('openrouter')}
-                className={`py-1.5 px-2 rounded-lg font-medium transition-all text-center cursor-pointer ${
-                  provider === 'openrouter'
-                    ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
-                    : 'text-slate-400 hover:text-white'
-                }`}
+                className={`py-1.5 px-2 rounded-lg font-medium transition-all text-center cursor-pointer ${provider === 'openrouter'
+                  ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
+                  : 'text-slate-400 hover:text-white'
+                  }`}
               >
                 OpenRouter
               </button>
               <button
                 type="button"
                 onClick={() => setProvider('gemini')}
-                className={`py-1.5 px-2 rounded-lg font-medium transition-all text-center cursor-pointer ${
-                  provider === 'gemini'
-                    ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
-                    : 'text-slate-400 hover:text-white'
-                }`}
+                className={`py-1.5 px-2 rounded-lg font-medium transition-all text-center cursor-pointer ${provider === 'gemini'
+                  ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
+                  : 'text-slate-400 hover:text-white'
+                  }`}
               >
                 Google Gemini
               </button>
@@ -157,8 +154,8 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
                   {provider === 'openrouter'
                     ? 'OpenRouter API Key'
                     : provider === 'gemini'
-                    ? 'Gemini API Key'
-                    : 'API Key (OpenRouter or Gemini)'}
+                      ? 'Gemini API Key'
+                      : 'API Key (OpenRouter or Gemini)'}
                 </span>
               </label>
               {apiKeyInput && (
@@ -179,8 +176,8 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
                   provider === 'openrouter'
                     ? 'sk-or-v1-...'
                     : provider === 'gemini'
-                    ? 'AIzaSy...'
-                    : 'sk-or-... or AIzaSy...'
+                      ? 'AIzaSy...'
+                      : 'sk-or-... or AIzaSy...'
                 }
                 className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/30 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white outline-none transition-all"
               />
@@ -210,11 +207,10 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
 
             {testResult && (
               <div
-                className={`flex items-start gap-2 p-2.5 rounded-xl border text-xs leading-relaxed ${
-                  testResult.success
-                    ? 'bg-emerald-950/30 border-emerald-500/30 text-emerald-300'
-                    : 'bg-rose-950/30 border-rose-500/30 text-rose-300'
-                }`}
+                className={`flex items-start gap-2 p-2.5 rounded-xl border text-xs leading-relaxed ${testResult.success
+                  ? 'bg-emerald-950/30 border-emerald-500/30 text-emerald-300'
+                  : 'bg-rose-950/30 border-rose-500/30 text-rose-300'
+                  }`}
               >
                 {testResult.success ? (
                   <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-emerald-400" />

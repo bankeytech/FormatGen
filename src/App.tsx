@@ -32,7 +32,7 @@ import {
 } from './services/rewriter';
 import type { SampleInput } from './data/sampleInputs';
 
-const SAVED_POSTS_STORAGE_KEY = 'formatgen_saved_posts_v2';
+const SAVED_POSTS_STORAGE_KEY = 'Bankeys4mat_saved_posts_v2';
 
 const INITIAL_PROMPT = 'iPhone 15 Pro Max 256GB White eSIM unlocked 96% BH 9/10 clean ₦770k';
 
@@ -72,7 +72,7 @@ export const App: React.FC = () => {
     setApiKey(key);
 
     try {
-      const storedSaved = localStorage.getItem(SAVED_POSTS_STORAGE_KEY) || localStorage.getItem('formatgen_saved_posts');
+      const storedSaved = localStorage.getItem(SAVED_POSTS_STORAGE_KEY) || localStorage.getItem('Bankeys4mat_saved_posts');
       if (storedSaved) {
         setSavedPosts(JSON.parse(storedSaved));
       }
@@ -269,9 +269,6 @@ export const App: React.FC = () => {
         {/* Reseller Hero Header Banner */}
         <div className="mb-6 sm:mb-8 text-center sm:text-left flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
-            <span className="text-emerald-400 text-xs font-bold tracking-widest uppercase mb-1 block">
-              Nigerian Reseller Sales Generator
-            </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               Turn Gadget Specs into Ready-to-Post WhatsApp Listings
             </h2>
@@ -345,8 +342,8 @@ export const App: React.FC = () => {
               <span className="inline-flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
                 <span
                   className={`w-2 h-2 rounded-full ${extractionSource === 'ai'
-                      ? 'bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.6)]'
-                      : 'bg-teal-400'
+                    ? 'bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.6)]'
+                    : 'bg-teal-400'
                     }`}
                 />
                 <span>

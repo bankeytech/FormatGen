@@ -29,10 +29,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-lg font-extrabold text-white tracking-tight flex items-center gap-1.5">
-                FormatGen
-                <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                Bankeys4mat
+                {/* <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                   Reseller Pro
-                </span>
+                </span> */}
               </h1>
             </div>
           </div>
@@ -83,8 +83,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={onOpenApiKeyModal}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${hasApiKey
-                ? 'bg-emerald-950/40 text-emerald-300 border-emerald-500/40 hover:bg-emerald-900/40'
-                : 'bg-slate-800/80 text-slate-400 border-slate-700/50 hover:bg-slate-800 hover:text-slate-200'
+              ? 'bg-emerald-950/40 text-emerald-300 border-emerald-500/40 hover:bg-emerald-900/40'
+              : 'bg-slate-800/80 text-slate-400 border-slate-700/50 hover:bg-slate-800 hover:text-slate-200'
               }`}
             title="Configure AI API Key (OpenRouter or Gemini)"
           >

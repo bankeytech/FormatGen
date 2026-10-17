@@ -46,15 +46,15 @@ Rules:
 8. Precision:
    - Never invent specs, prices, or badges that aren't in the source text.`;
 
-const API_KEY_STORAGE_KEY = 'formatgen_gemini_api_key';
-const PROVIDER_STORAGE_KEY = 'formatgen_ai_provider';
-const OPENROUTER_MODEL_STORAGE_KEY = 'formatgen_openrouter_model';
+const API_KEY_STORAGE_KEY = 'Bankeys4mat_gemini_api_key';
+const PROVIDER_STORAGE_KEY = 'Bankeys4mat_ai_provider';
+const OPENROUTER_MODEL_STORAGE_KEY = 'Bankeys4mat_openrouter_model';
 
 export const DEFAULT_OPENROUTER_MODEL = 'google/gemini-2.0-flash-001';
 
 export function getStoredApiKey(): string {
   try {
-    return localStorage.getItem(API_KEY_STORAGE_KEY) || localStorage.getItem('formatgen_api_key') || '';
+    return localStorage.getItem(API_KEY_STORAGE_KEY) || localStorage.getItem('Bankeys4mat_api_key') || '';
   } catch {
     return '';
   }
@@ -229,7 +229,7 @@ async function callOpenRouterApi(cleanInput: string, activeKey: string, customMo
           'Authorization': `Bearer ${activeKey.trim()}`,
           'Content-Type': 'application/json',
           'HTTP-Referer': typeof window !== 'undefined' && window.location ? window.location.origin : 'http://localhost:5173',
-          'X-Title': 'FormatGen',
+          'X-Title': 'Bankeys4mat',
         },
         body: JSON.stringify({
           model,
@@ -332,9 +332,9 @@ function parseAiJsonResponse(rawResponse: string): ProductPost {
     specs: cleanSpecs,
     priceOptions: Array.isArray(parsed.priceOptions)
       ? parsed.priceOptions.map((p: any) => ({
-          label: p.label ? stripResidualSymbols(String(p.label)) : null,
-          amount: typeof p.amount === 'number' && !isNaN(p.amount) ? p.amount : 0,
-        }))
+        label: p.label ? stripResidualSymbols(String(p.label)) : null,
+        amount: typeof p.amount === 'number' && !isNaN(p.amount) ? p.amount : 0,
+      }))
       : [],
     tagline: parsed.tagline ? stripResidualSymbols(String(parsed.tagline)) : null,
     badges: cleanBadges,

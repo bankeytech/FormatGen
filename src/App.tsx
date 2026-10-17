@@ -277,14 +277,6 @@ export const App: React.FC = () => {
             </p>
           </div>
 
-          <div className="hidden sm:flex items-center gap-2">
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-              ⚡ 7 Tested Styles
-            </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-400 border border-teal-500/20">
-              🇳🇬 Naira Ready
-            </span>
-          </div>
         </div>
 
         {/* 2-Column Responsive Layout: Left: Input & Details, Right: WhatsApp Bubble Preview & Actions */}

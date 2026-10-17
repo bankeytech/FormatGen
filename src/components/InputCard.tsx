@@ -93,11 +93,10 @@ export const InputCard: React.FC<InputCardProps> = ({
           <button
             type="button"
             onClick={() => setInputMode('quick')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-              inputMode === 'quick'
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${inputMode === 'quick'
                 ? 'bg-slate-800 text-white shadow-sm'
                 : 'text-slate-400 hover:text-white'
-            }`}
+              }`}
           >
             <ClipboardPaste className="w-3.5 h-3.5 text-emerald-400" />
             <span>⚡ Quick Paste</span>
@@ -106,11 +105,10 @@ export const InputCard: React.FC<InputCardProps> = ({
           <button
             type="button"
             onClick={() => setInputMode('structured')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-              inputMode === 'structured'
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${inputMode === 'structured'
                 ? 'bg-slate-800 text-white shadow-sm'
                 : 'text-slate-400 hover:text-white'
-            }`}
+              }`}
           >
             <SlidersHorizontal className="w-3.5 h-3.5 text-teal-400" />
             <span>📝 Structured Form</span>
@@ -125,7 +123,7 @@ export const InputCard: React.FC<InputCardProps> = ({
               className="flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700/60 transition-colors cursor-pointer"
               title="Paste from clipboard"
             >
-              <ClipboardPaste className="w-3.5 h-3.5 text-emerald-400" />
+              <ClipboardPaste className="w-4.5 h-4.5 text-emerald-400" />
               <span className="hidden sm:inline">Paste</span>
             </button>
             {input.length > 0 && (
@@ -135,7 +133,7 @@ export const InputCard: React.FC<InputCardProps> = ({
                 className="flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-slate-400 hover:text-rose-400 bg-slate-800/60 hover:bg-slate-800 rounded-lg border border-slate-700/40 transition-colors cursor-pointer"
                 title="Clear input"
               >
-                <XCircle className="w-3.5 h-3.5" />
+                <XCircle className="w-4.5 h-4.5" />
                 <span className="hidden sm:inline">Clear</span>
               </button>
             )}

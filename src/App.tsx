@@ -9,7 +9,7 @@ import { SavedPostsDrawer } from './components/SavedPostsDrawer';
 import { ApiKeyModal } from './components/ApiKeyModal';
 import { MyStyleModal } from './components/MyStyleModal';
 import { BulkGeneratorModal } from './components/BulkGeneratorModal';
-import { LandingSection } from './components/LandingSection';
+// import { LandingSection } from './components/LandingSection';
 import type {
   ProductPost,
   TemplateStyle,
@@ -344,11 +344,10 @@ export const App: React.FC = () => {
             <div className="flex items-center justify-between px-2 -mt-2 text-xs">
               <span className="inline-flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
                 <span
-                  className={`w-2 h-2 rounded-full ${
-                    extractionSource === 'ai'
+                  className={`w-2 h-2 rounded-full ${extractionSource === 'ai'
                       ? 'bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.6)]'
                       : 'bg-teal-400'
-                  }`}
+                    }`}
                 />
                 <span>
                   {extractionSource === 'ai'
@@ -379,7 +378,7 @@ export const App: React.FC = () => {
         </div>
 
         {/* Landing Section (Unobtrusive & educational below generator) */}
-        <LandingSection />
+        {/* <LandingSection /> */}
       </main>
 
       {/* Modals & Drawers */}

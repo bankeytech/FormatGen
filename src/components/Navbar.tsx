@@ -35,9 +35,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </span>
               </h1>
             </div>
-            <p className="text-xs text-slate-400 hidden md:block">
-              Turn gadget specs into ready-to-post WhatsApp sales listings in seconds
-            </p>
           </div>
         </div>
 
@@ -85,25 +82,22 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             type="button"
             onClick={onOpenApiKeyModal}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
-              hasApiKey
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${hasApiKey
                 ? 'bg-emerald-950/40 text-emerald-300 border-emerald-500/40 hover:bg-emerald-900/40'
                 : 'bg-slate-800/80 text-slate-400 border-slate-700/50 hover:bg-slate-800 hover:text-slate-200'
-            }`}
+              }`}
             title="Configure AI API Key (OpenRouter or Gemini)"
           >
             <Key className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">{hasApiKey ? 'AI Active' : 'Offline Engine'}</span>
             <span className="relative flex h-2 w-2">
               <span
-                className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${
-                  hasApiKey ? 'bg-emerald-400' : 'bg-slate-500'
-                }`}
+                className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${hasApiKey ? 'bg-emerald-400' : 'bg-slate-500'
+                  }`}
               />
               <span
-                className={`relative inline-flex rounded-full h-2 w-2 ${
-                  hasApiKey ? 'bg-emerald-500' : 'bg-slate-400'
-                }`}
+                className={`relative inline-flex rounded-full h-2 w-2 ${hasApiKey ? 'bg-emerald-500' : 'bg-slate-400'
+                  }`}
               />
             </span>
           </button>
